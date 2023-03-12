@@ -1,0 +1,58 @@
+/* tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    html {
+        font-size: 55;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #btn-menu {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top:100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem)
+        
+    }
+
+    header .navbar.active {
+        right: 0;
+        transition: .5s;
+    }
+
+    header .navbar a {
+        display: block;
+        color: #000;
+        padding: 1rem 2rem;
+        font-size: 2rem
+    };
+
+
+    header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 46.25em) {
+    html {
+        font-size: 50%;
+    }
+
+    header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+ }
