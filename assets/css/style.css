@@ -12,7 +12,7 @@
 }
 
 :root {
-  --primary-color: #d3ad7f;
+  --primary-color: #ecc641;
   --black: #13131a;
   --bg: #010103;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -20,42 +20,44 @@
 
 /* common */
 .btn {
-    display: inline-block;
-    padding: .8rem .3rem;
-    font-size: 1.7rem;
-    color: #fff;
-    background: #fff;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: .5s;
-    position: relative;
-    z-index: 1;
-    border: 1px solid var(--primary-color);
+  display: inline-block;
+  padding: 0.8rem 0.3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--primary-color);
 }
 
 .btn:hover {
-    color: var(--primary-color);
-    
+  color: var(--primary-color);
 }
 
 .btn::after {
-    content: '';
-    background-color: var(--primary-color);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform-origin: left;
+  content: "";
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: left;
 }
 
 .btn:hover::after {
-    transition: .5s;
-    transform-origin: right;
-    transform: scaleX(0);
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
 }
 
+section {
+  padding: 2rem 7%;
+}
 
 html {
   font-size: 62.5%;
@@ -85,7 +87,7 @@ body {
 /* Header */
 
 header {
-  background: var(--bg);
+  backdrop-filter: blur(1rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,8 +111,6 @@ header .navbar a {
   padding: 0.5rem 1rem;
   position: relative;
 }
-
-
 
 header .navbar a::before {
   position: absolute;
@@ -160,13 +160,11 @@ header .search-form {
   height: 5rem;
   transform: scaleY(0);
   transform-origin: top;
-
 }
 
 header .search-form.active {
-    transform: scaleY(1);
-  transition: .5s;
-  
+  transform: scaleY(1);
+  transition: 0.5s;
 }
 
 header .search-form input {
@@ -200,8 +198,8 @@ header .cart-container {
 }
 
 header .cart-container.active {
-    right: 0;
-    transition: .5s;
+  right: 0;
+  transition: 0.5s;
 }
 
 header .cart-container .cart-item {
@@ -214,7 +212,7 @@ header .cart-container .cart-item {
 }
 
 header .cart-container .cart-item:nth-child(3) {
-    border: none;
+  border: none;
 }
 
 header .cart-container .img-cart {
@@ -239,8 +237,57 @@ header .cart-container .cart-item i:hover {
 }
 
 header .cart-container .btn {
-    width: 90%;
-    text-align: center;
-    margin: 2rem;
+  width: 90%;
+  text-align: center;
+  margin: 2rem;
+}
+
+/* Banner */
+.banner {
+  width: 100vw;
+  height: calc(100vh - 8.7rem);
+  margin-top: 8.7rem;
+}
+
+.banner .img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/assets/img/coffee\ 1.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 60rem;
+}
+
+.home .content h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.home .content .desc {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.home .content .btn {
+  padding: 1.6rem 4.7rem;
+  margin-top: 4.2rem;
 }
 
