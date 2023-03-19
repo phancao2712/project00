@@ -61,13 +61,13 @@ section {
 
 h2.subtitle {
   font-weight: 700;
-font-size: 40px;
-line-height: 1.5;
-text-transform: uppercase;
-padding: 7rem 0;
-color: var(--primary-color);
-text-align: center;
-} 
+  font-size: 40px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  padding: 7rem 0;
+  color: var(--primary-color);
+  text-align: center;
+}
 
 h2.subtitle span {
   color: #fff;
@@ -310,7 +310,7 @@ header .cart-container .btn {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-} 
+}
 
 .about .image {
   width: 50%;
@@ -320,7 +320,7 @@ header .cart-container .btn {
 .about .image img {
   width: 100%;
   height: 100%;
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .about .content {
@@ -329,13 +329,71 @@ header .cart-container .btn {
 
 .about .content .desc {
   font-weight: 500;
-font-size: 20px;
-text-transform: capitalize;
-color: #FFFFFF;
-margin-bottom: 20px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
 
 .about .content .btn {
   padding: 1.2rem;
 }
 
+/* Menu */
+.our-menu .list-item {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.our-menu .list-item .item {
+  width: 30%;
+  border: 1px solid #fff;
+  padding: 6.1rem 0;
+  text-align: center;
+}
+
+.our-menu .list-item .item:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.our-menu .list-item .item .img-menu {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.our-menu .list-item .item .name {
+  margin: 1.4rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+.our-menu .list-item .item .price {
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+.our-menu .list-item .item .btn {
+  width: 65%;
+  padding: 1rem 3rem;
+}
+
+.our-menu .list-item .item .price span {
+  font-size: 1.6rem;
+  margin-left: 0.9rem;
+  text-decoration-line: line-through;
+}
+
+.our-menu .list-item .item h4 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+}

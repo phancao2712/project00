@@ -43,19 +43,26 @@
     right: 2rem;
   }
 
-  .home .content h1{
+  .home .content h1 {
     font-size: 4.5rem;
   }
 
-  .home .content h1{
+  .home .content h1 {
     font-size: 2.5rem;
   }
-
 
   .home {
     background-position: left;
     justify-content: center;
     text-align: center;
+  }
+
+  .our-menu .list-item {
+    justify-content: center;
+  }
+
+  .our-menu .list-item .item {
+    width: 48%;
   }
 }
 
@@ -68,5 +75,11 @@
   header .search-form {
     width: 90%;
     right: 2rem;
+  }
+  .our-menu .list-item {
+    flex-direction: column;
+  }
+  .our-menu .list-item .item {
+    width: 100%;
   }
 }
