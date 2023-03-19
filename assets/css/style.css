@@ -59,6 +59,20 @@ section {
   padding: 2rem 7%;
 }
 
+h2.subtitle {
+  font-weight: 700;
+font-size: 40px;
+line-height: 1.5;
+text-transform: uppercase;
+padding: 7rem 0;
+color: var(--primary-color);
+text-align: center;
+} 
+
+h2.subtitle span {
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -289,5 +303,39 @@ header .cart-container .btn {
 .home .content .btn {
   padding: 1.6rem 4.7rem;
   margin-top: 4.2rem;
+}
+
+/* about */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+} 
+
+.about .image {
+  width: 50%;
+  flex: 1 1 45rem;
+}
+
+.about .image img {
+  width: 100%;
+  height: 100%;
+    object-fit: cover;
+}
+
+.about .content {
+  flex: 1 1 45rem;
+}
+
+.about .content .desc {
+  font-weight: 500;
+font-size: 20px;
+text-transform: capitalize;
+color: #FFFFFF;
+margin-bottom: 20px;
+}
+
+.about .content .btn {
+  padding: 1.2rem;
 }
 
