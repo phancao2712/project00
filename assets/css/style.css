@@ -274,7 +274,7 @@ header .cart-container .btn {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(/assets/img/coffee\ 1.svg) no-repeat;
+  background: url(/assets/img/banner.svg) no-repeat;
   background-size: cover;
   background-position: center;
 }
