@@ -269,7 +269,13 @@ header .cart-container .btn {
   object-fit: cover;
 }
 
+
+
 /* Home */
+.icon i:hover {
+  scale: 1.5;
+}
+
 .home {
   min-height: 100vh;
   display: flex;
