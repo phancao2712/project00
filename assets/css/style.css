@@ -223,6 +223,7 @@ header .cart-container .cart-item {
   gap: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
+  padding-left: 1.2rem;
 }
 
 header .cart-container .cart-item:nth-child(3) {
@@ -230,7 +231,7 @@ header .cart-container .cart-item:nth-child(3) {
 }
 
 header .cart-container .img-cart {
-  width: 10rem;
+  width: 7rem;
   height: 10rem;
 }
 
