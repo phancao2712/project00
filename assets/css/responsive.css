@@ -64,6 +64,10 @@
   .our-menu .list-item .item {
     width: 48%;
   }
+
+  .product .list .item {
+    width: 50%;
+  }
 }
 
 /* Mobile */
@@ -80,6 +84,10 @@
     flex-direction: column;
   }
   .our-menu .list-item .item {
+    width: 100%;
+  }
+
+  .product .list .item {
     width: 100%;
   }
 }

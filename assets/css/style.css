@@ -351,6 +351,7 @@ header .cart-container .btn {
   align-items: center;
   color: #fff;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .our-menu .list-item .item {
@@ -401,4 +402,58 @@ header .cart-container .btn {
   font-size: 2rem;
   line-height: 1.5;
   text-transform: capitalize;
+}
+
+/* Product */
+.product .list {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product .list .item {
+  width: 30%;
+  border: 1px solid #fff;
+  padding: 6.1rem 0;
+  text-align: center;
+}
+
+.product .list .item .list-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+  gap: 2.3rem;
+}
+
+.product .list .item .list-icon img {
+  padding: 1.3rem;
+  border: 1px solid #fff;
+}
+
+.product .list .item .list-icon img:hover {
+  cursor: pointer;
+}
+
+.product .list .item .img-prod {
+  width: 12.7rem;
+  height: 23.4rem;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+}
+
+.product .list .item .heading {
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.product .list .item .rating {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1.1rem;
+  margin-bottom: 0.6rem;
 }
