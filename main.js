@@ -1,3 +1,4 @@
+// menu
 let navbar = document.querySelector('.navbar');
 
 document.querySelector('#btn-menu').onclick = () => {
@@ -14,7 +15,7 @@ document.querySelector('#cart').onclick = () => {
     searchBox.classList.remove('active');
 }
 
-
+// search box
 let searchBox = document.querySelector('.search-form');
 
 document.querySelector('#search').onclick = () => {
@@ -29,3 +30,19 @@ window.onscroll = () => {
     searchBox.classList.remove('active');
 }
  
+
+// Remove item
+window.addEventListener("load", function () {
+    var removeBtn = document.getElementsByClassName("remove-item");
+    console.log(removeBtn);
+  
+    for (var i = 0; i < removeBtn.length; i++) {
+      var button = removeBtn[i];
+      button.addEventListener("click", removeItem);
+    }
+  
+    function removeItem(event) {
+      var clicked = event.target;
+      clicked.parentElement.remove();
+    }
+  });

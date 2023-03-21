@@ -35,7 +35,9 @@
       </nav>
       <div class="icon">
         <div id="search"><i class="fa-solid fa-magnifying-glass"></i></div>
-        <div id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div id="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
         <div id="btn-menu"><i class="fa-solid fa-bars"></i></div>
       </div>
 
@@ -55,7 +57,7 @@
             <p class="desc">Coffee 1</p>
             <span class="price">1,45$</span>
           </div>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark remove-item"></i>
         </div>
         <div class="cart-item">
           <img src="./assets/img/menu-2.svg" alt="" class="img-cart" />
@@ -63,7 +65,7 @@
             <p class="desc">Coffee 1</p>
             <span class="price">1,45$</span>
           </div>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark remove-item"></i>
         </div>
         <div class="cart-item">
           <img src="./assets/img/menu-3.svg" alt="" class="img-cart" />
@@ -71,7 +73,7 @@
             <p class="desc">Coffee 1</p>
             <span class="price">1,45$</span>
           </div>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark remove-item"></i>
         </div>
         <div class="btn">Check Now</div>
       </div>
@@ -218,7 +220,7 @@
 
     <!-- Reviewer -->
     <section class="review" id="Review">
-      <h2 class="subtitle">customer’s<span> review</span></h2>
+      <h2 class="subtitle"><span>customer’s</span> review</h2>
       <div class="list-review">
         <div class="item">
           <div class="img-header">
@@ -282,6 +284,48 @@
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-0.5.svg" alt="" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="Contact">
+      <h2 class="subtitle">contact <span>us</span></h2>
+      <div class="box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31350.8427727178!2d106.63496131154952!3d10.822380028868391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175299260b9a577%3A0x8ded46e641c401c7!2sCafe%20BeanJoy!5e0!3m2!1svi!2s!4v1679389816801!5m2!1svi!2s"
+          width="50%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="form">
+          <h4 class="head">get in touch</h4>
+          <div class="box-form">
+            <label for="name">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </label>
+            <label for="email">
+              <i class="fa-regular fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+              /> </label
+            ><label for="phone">
+              <i class="fa-solid fa-phone"></i>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Number Phone"
+              />
+            </label>
+          </div>
+          <a href="#!" class="btn">Contact now</a>
         </div>
       </div>
     </section>
