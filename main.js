@@ -46,3 +46,10 @@ window.addEventListener("load", function () {
       clicked.parentElement.remove();
     }
   });
+
+// read all about
+function readAbout() {
+    const para = document.getElementById("para"); 
+    para.classList.toggle('line-clamp');
+
+}

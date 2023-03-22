@@ -80,6 +80,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: .5s;
+}
+
 html::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -288,6 +296,11 @@ header .cart-container .btn {
   max-width: 60rem;
 }
 
+.home .content .desc span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .home .content h1 {
   font-weight: 700;
   font-size: 4rem;
@@ -315,6 +328,7 @@ header .cart-container .btn {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  align-items: flex-start;
 }
 
 .about .image {
@@ -338,10 +352,12 @@ header .cart-container .btn {
   text-transform: capitalize;
   color: #ffffff;
   margin-bottom: 2rem;
+  transition: .5s;
 }
 
 .about .content .btn {
   padding: 1.2rem;
+  text-align: center;
 }
 
 /* Menu */
@@ -483,6 +499,7 @@ header .cart-container .btn {
   color: #fff;
   gap: 2.4rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .review .list-review .item {
@@ -530,6 +547,7 @@ header .cart-container .btn {
 
 .contact .box {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contact .form {
@@ -560,10 +578,11 @@ header .cart-container .btn {
 }
 
 .contact .form label input {
-  width: 95%;
+  width: 93%;
   height: 6rem;
   background: transparent;
   padding-left: 2rem;
+  color: #fff;
 }
 
 .contact .form label input::placeholder {
@@ -575,4 +594,53 @@ header .cart-container .btn {
 
 .contact .form .btn {
   padding: 1.6rem 3.2rem;
+}
+
+/* Blog */
+.blog .list-blog {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+.blog .list-blog .item {
+  width: 30%;
+  border: 1px solid #fff;
+}
+
+.blog .list-blog .item img {
+  width: 100%;
+  height: 29.2rem;
+  object-fit: cover;
+}
+
+.blog .list-blog .item h4 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-top: 2.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.blog .list-blog .item .box {
+  padding: 2.2rem 2.5rem;
+}
+
+.blog .list-blog .item .subtitle {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--primary-color);
+  margin-bottom: 1.1rem;
+}
+
+.blog .list-blog .item .desc {
+  margin-bottom: 1.1rem;
+}
+
+.blog .list-blog .item .btn {
+  padding: 1.6rem 4.4rem;
+  text-align: center;
 }

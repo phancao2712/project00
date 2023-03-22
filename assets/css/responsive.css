@@ -66,7 +66,32 @@
   }
 
   .product .list .item {
+    width: 70%;
+  }
+
+  .review .list-review .item {
+    width: 70%;
+  }
+
+  .contact .box iframe,
+  .contact .box .form {
+    width: 100%;
+  }
+
+  .blog .list-blog .item {
+    width: 70%;
+  }
+
+  .blog .list-blog .item .btn {
+    width: 100%;
+  }
+  .about .content .btn {
     width: 50%;
+    transform: translateX(50%);
+  }
+
+  .contact .form .btn {
+    margin-bottom: 3rem;
   }
 }
 
@@ -89,5 +114,29 @@
 
   .product .list .item {
     width: 100%;
+  }
+  .review .list-review .item {
+    width: 100%;
+  }
+
+  .contact .box iframe,
+  .contact .box .form {
+    width: 100%;
+  }
+  .contact .form .btn {
+    margin-bottom: 2rem;
+  }
+
+  .blog .list-blog .item {
+    width: 100%;
+  }
+
+  .blog .list-blog .item .btn {
+    width: 100%;
+  }
+
+  .about .content .btn {
+    width: 50%;
+    transform: translateX(50%);
   }
 }
