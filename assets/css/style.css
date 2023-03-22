@@ -519,6 +519,16 @@ header .cart-container .btn {
   opacity: 0;
 }
 
+.review .list-review .item .avt {
+  width: 12.6rem;
+  height: 12.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+
+}
+
 .review .list-review .item:hover .desc {
   height: 16.8rem;
   opacity: 1;
