@@ -655,16 +655,16 @@ header .cart-container .btn {
 }
 
 /* footer */
-footer {
+footer .foot {
   display: flex;
   width: 100vw;
-height: 9rem;
   background-color: var(--primary-color);
   justify-content: center;
   gap: 5rem;
   align-items: center;
   font-size: 1.4rem;
   color: #fff;
+  padding:3rem;
 }
 
 footer .icon {

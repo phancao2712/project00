@@ -93,6 +93,10 @@
   .contact .form .btn {
     margin-bottom: 3rem;
   }
+
+  footer .foot {
+    flex-direction: column;
+  }
 }
 
 /* Mobile */
