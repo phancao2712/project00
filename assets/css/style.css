@@ -358,6 +358,7 @@ header .cart-container .btn {
   color: #ffffff;
   margin-bottom: 2rem;
   transition: 0.5s;
+  text-align: justify;
 }
 
 .about .content .btn {
@@ -669,7 +670,7 @@ footer .foot {
   align-items: center;
   font-size: 1.4rem;
   color: #fff;
-  padding:3rem;
+  padding: 3rem;
 }
 
 footer .icon {
@@ -685,8 +686,7 @@ footer .icon a {
   align-items: center;
   text-align: center;
   padding-top: 2px;
-  transition: .5s;
-  
+  transition: 0.5s;
 }
 
 footer .icon i {
@@ -705,6 +705,6 @@ footer a {
   color: #fff;
 }
 
-footer a i{
+footer a i {
   margin-right: 2px;
 }
