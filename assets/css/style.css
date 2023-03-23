@@ -85,7 +85,7 @@ html {
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 html::-webkit-scrollbar {
@@ -352,7 +352,7 @@ header .cart-container .btn {
   text-transform: capitalize;
   color: #ffffff;
   margin-bottom: 2rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .about .content .btn {
@@ -526,7 +526,6 @@ header .cart-container .btn {
   border-radius: 50%;
   object-fit: cover;
   margin-top: 2rem;
-
 }
 
 .review .list-review .item:hover .desc {
@@ -653,4 +652,54 @@ header .cart-container .btn {
 .blog .list-blog .item .btn {
   padding: 1.6rem 4.4rem;
   text-align: center;
+}
+
+/* footer */
+footer {
+  display: flex;
+  width: 100vw;
+height: 9rem;
+  background-color: var(--primary-color);
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+footer .icon {
+  display: flex;
+  gap: 2px;
+}
+
+footer .icon a {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2px;
+  transition: .5s;
+  
+}
+
+footer .icon i {
+  color: var(--primary-color);
+}
+
+footer .icon i:hover {
+  scale: 0;
+}
+
+footer .icon a:hover {
+  transform: translateY(-3px);
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a i{
+  margin-right: 2px;
 }
