@@ -10,6 +10,9 @@
   section {
     padding: 2rem;
   }
+  .our-menu .list-item {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -57,16 +60,19 @@
     text-align: center;
   }
 
-  .our-menu .list-item {
-    justify-content: center;
-  }
+  
 
   .our-menu .list-item .item {
-    width: 48%;
+    width: 70%;
   }
 
   .product .list .item {
     width: 70%;
+  }
+
+  .product .list {
+    justify-content: center;
+    gap: 3rem;
   }
 
   .review .list-review .item {
@@ -98,6 +104,10 @@
     flex-direction: column;
     gap: 2rem;
   }
+  .review .list-review {
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 
 /* Mobile */
@@ -122,6 +132,11 @@
   }
   .review .list-review .item {
     width: 100%;
+  }
+
+  .review .list-review {
+    justify-content: center;
+    gap: 3rem;
   }
 
   .contact .box iframe,

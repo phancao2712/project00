@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BeanJoy</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.svg"
+      type="image/x-icon"
+    />
 
     <!-- Link Css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -25,7 +30,7 @@
       </a>
       <!-- Menu -->
       <nav class="navbar">
-        <a href="#Home" class="active">Home</a>
+        <a href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#Menu">Menu</a>
         <a href="#Product">Product</a>
@@ -51,9 +56,7 @@
 
       <!-- Cart -->
       <div class="cart-container">
-        <div class="cart-list">
-          
-        </div>
+        <div class="cart-list"></div>
 
         <span class="total">Total <span class="price-total">0</span>$</span>
         <div class="btn buy-btn">Buy Now</div>
@@ -109,39 +112,39 @@
       <h2 class="subtitle"><span>Our</span> menu</h2>
       <div class="list-item">
         <div class="item">
-          <img src="./assets/img/menu-1.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-1.jpg" alt="" class="img-menu" />
+          <h4 class="name">Caffè Americano</h4>
+          <div class="price">$5.6 <span>$6.5</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
         <div class="item">
-          <img src="./assets/img/menu-2.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-2.jpg" alt="" class="img-menu" />
+          <h4 class="name">Café Latte</h4>
+          <div class="price">$4.1 <span>$5.1</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
         <div class="item">
-          <img src="./assets/img/menu-3.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-3.jpg" alt="" class="img-menu" />
+          <h4 class="name">Hazelnut Macchiato</h4>
+          <div class="price">$3.9 <span>$4.5</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
         <div class="item">
-          <img src="./assets/img/menu-4.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-4.jpg" alt="" class="img-menu" />
+          <h4 class="name">Caramel Macchiato</h4>
+          <div class="price">$3.0 <span>$4.1</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
         <div class="item">
-          <img src="./assets/img/menu-5.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-5.jpg" alt="" class="img-menu" />
+          <h4 class="name">Espresso</h4>
+          <div class="price">$3.6 <span>$4.2</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
         <div class="item">
-          <img src="./assets/img/menu-6.svg" alt="" class="img-menu" />
-          <h4 class="name">Tasy And Healty</h4>
-          <div class="price">$15.99 <span>$20.99</span></div>
+          <img src="./assets/img/cafe-6.jpg" alt="" class="img-menu" />
+          <h4 class="name">Ristretto Bianco</h4>
+          <div class="price">$3.0 <span>$4.1</span></div>
           <button class="btn orderBtn">Order Now</button>
         </div>
       </div>
@@ -154,19 +157,46 @@
         <div class="item">
           <img src="./assets/img/prod-1.svg" alt="" class="img-prod" />
           <h3 class="heading">Blissful Brew</h3>
-          <div style="font-size: 2.5rem;"><span class="price">20.5</span>$<span style="margin-left: 0.5rem; text-decoration-line: line-through;font-size: 2rem;">30$</span></div>
+          <div style="font-size: 2.5rem">
+            <span class="price">20.5</span>$<span
+              style="
+                margin-left: 0.5rem;
+                text-decoration-line: line-through;
+                font-size: 2rem;
+              "
+              >30$</span
+            >
+          </div>
           <button class="btn addItem">Add to cart</button>
         </div>
         <div class="item">
           <img src="./assets/img/prod-2.svg" alt="" class="img-prod" />
           <h3 class="heading">Joyful Java</h3>
-          <div style="font-size: 2.5rem;"><span class="price">19.3</span>$<span style="margin-left: 0.5rem; text-decoration-line: line-through;font-size: 2rem;">25$</span></div>
+          <div style="font-size: 2.5rem">
+            <span class="price">19.3</span>$<span
+              style="
+                margin-left: 0.5rem;
+                text-decoration-line: line-through;
+                font-size: 2rem;
+              "
+              >25$</span
+            >
+          </div>
           <button class="btn addItem">Add to cart</button>
         </div>
         <div class="item">
           <img src="./assets/img/prod-3.svg" alt="" class="img-prod" />
           <h3 class="heading">Bold Bean</h3>
-          <div style="font-size: 2.5rem;"><span class="price">18.2</span>$<span style="margin-left: 0.5rem; text-decoration-line: line-through;font-size: 2rem;">21$</span></div>
+          <div style="font-size: 2.5rem">
+            <span class="price">18.2</span>$<span
+              style="
+                margin-left: 0.5rem;
+                text-decoration-line: line-through;
+                font-size: 2rem;
+              "
+              >21$</span
+            >
+          </div>
           <button class="btn addItem">Add to cart</button>
         </div>
       </div>
@@ -195,7 +225,7 @@
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
-            <img src="./assets/icon/star-0.5.svg" alt="" />
+            <img src="./assets/icon/star-1.svg" alt="" />
           </div>
         </div>
         <div class="item">
@@ -209,7 +239,7 @@
             great variety of food items on the menu, including healthy options
           </p>
           <img src="./assets/img/avt2.svg" alt="" class="avt" />
-          <h4>john deo</h4>
+          <h4>Rebecca</h4>
           <div class="rating">
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
@@ -230,13 +260,13 @@
             satisfy your cravings.
           </p>
           <img src="./assets/img/avt3.svg" alt="" class="avt" />
-          <h4>john deo</h4>
+          <h4>Christopher</h4>
           <div class="rating">
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
             <img src="./assets/icon/star-1.svg" alt="" />
-            <img src="./assets/icon/star-0.5.svg" alt="" />
+            <img src="./assets/icon/star-1.svg" alt="" />
           </div>
         </div>
       </div>

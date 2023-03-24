@@ -374,11 +374,11 @@ header .cart-container .btn {
 /* Menu */
 .our-menu .list-item {
   display: flex;
-  gap: 2.3rem;
+  gap: 5rem;
   align-items: center;
   color: #fff;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .our-menu .list-item .item {
@@ -421,7 +421,6 @@ header .cart-container .btn {
 
 .our-menu .list-item .item .price span {
   font-size: 1.6rem;
-  margin-left: 0.9rem;
   text-decoration-line: line-through;
 }
 
@@ -435,11 +434,10 @@ header .cart-container .btn {
 /* Product */
 .product .list {
   display: flex;
-  gap: 2.3rem;
   align-items: center;
   color: #fff;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .product .list .item {
@@ -485,10 +483,9 @@ header .cart-container .btn {
 /* Review */
 .review .list-review {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   color: #fff;
-  gap: 2.4rem;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -597,16 +594,19 @@ header .cart-container .btn {
 }
 
 /* Blog */
+section#Blog {
+  padding-bottom: 10rem;
+}
+
 .blog .list-blog {
   display: flex;
   flex-wrap: wrap;
   color: #fff;
-  gap: 2.4rem;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .blog .list-blog .item {
-  width: 30%;
+  width: 31%;
   border: 1px solid #fff;
 }
 
