@@ -385,6 +385,7 @@ header .cart-container .btn {
   border: 1px solid #fff;
   padding: 6.1rem 0;
   text-align: center;
+  transition: .5s;
 }
 
 .our-menu .list-item .item:hover {

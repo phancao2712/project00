@@ -50,16 +50,18 @@ addBtn.forEach(function (button, index) {
     var productPrice = product.querySelector(".price").innerText;
 
     addToCart(productImg, productName, productPrice);
+    
   });
 });
 
 function addToCart(productImg, productName, productPrice) {
   var productItem = document.createElement("div.cart-item");
-  var itemContent = '<div class="cart-item"><img src="'+productImg+'" alt="" class="img-cart" /><div class="content"><p class="desc">'+productName+'</p><span class="price">'+productPrice+'$</span></div><i class="fa-solid fa-xmark remove-item"></i></div>';
+  var itemContent = '<div class="cart-item"><img src="'+productImg+'" alt="" class="img-cart" /><div class="content"><p class="desc">'+productName+'</p><div style="color : var(--primary-color)"><span class="price">'+productPrice+'</span>$</div></div><i class="fa-solid fa-xmark remove-item"></i></div>';
   productItem.innerHTML = itemContent;  
   var productList = document.querySelector(".cart-list");
   productList.append(productItem)
   removeFromCart()
+  totalPrice();
 }
 
 // Remove item
@@ -77,4 +79,32 @@ function removeFromCart() {
     var clicked = event.target;
     clicked.parentElement.remove();
   }
+  totalPrice();
+  
 }
+
+// TotalPrice
+function totalPrice() {
+  var itemProduct = document.querySelectorAll(".cart-item")
+  var productTotal = 0;
+  for (var i = 0; i < itemProduct.length; i++) {
+    var productPrice = itemProduct[i].querySelector(".price").innerText;
+    var price = Number(productPrice);
+    productTotal = productTotal + price;
+    productTotal.toFixed(2);
+    console.log(productTotal);
+  } 
+  var priceTotal = document.querySelector(".price-total")
+  if (itemProduct.length <= 0) {
+    productTotal = 0;
+  } else {
+    priceTotal.innerHTML = productTotal
+  }
+}
+
+function buyProduct () {
+  var buyProduct= document.querySelector(".buy-product");
+  buyProduct.addEventListener("click", function () {
+    alert("")
+  })
+ }
