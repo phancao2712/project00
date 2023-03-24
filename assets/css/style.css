@@ -65,7 +65,7 @@ section {
 
 h2.subtitle {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 4rem;
   line-height: 1.5;
   text-transform: uppercase;
   padding: 7rem 0;
@@ -135,8 +135,12 @@ header .logo {
 
 header .navbar a {
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   position: relative;
+}
+
+header .navbar .active {
+  color: var(--primary-color);
 }
 
 header .navbar a::before {

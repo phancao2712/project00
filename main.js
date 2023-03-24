@@ -68,7 +68,6 @@ function addToCart(productImg, productName, productPrice) {
 
 function removeFromCart() {
   var removeBtn = document.getElementsByClassName("remove-item");
-  console.log(removeBtn);
 
   for (var i = 0; i < removeBtn.length; i++) {
     var button = removeBtn[i];
@@ -78,8 +77,8 @@ function removeFromCart() {
   function removeItem(event) {
     var clicked = event.target;
     clicked.parentElement.remove();
+    updatePrice();
   }
-  updatePrice();
   
 }
 
@@ -91,13 +90,13 @@ function updatePrice() {
     var productPrice = itemProduct[i].querySelector(".price").innerText;
     var price = Number(productPrice);
     productTotal = productTotal + price;
-    productTotal.toFixed(2);
-    console.log(productTotal);
+    productTotal.toFixed(1);
   }
   var priceTotal = document.querySelector(".price-total")
-  if (itemProduct.length <= 0) {
-    productTotal.innerHtml= "0"
-  } else {
+  if (itemProduct.length >= 1) {
+    priceTotal.innerHTML = productTotal 
+  } else if (itemProduct.length === 0) {
+    productTotal = 0;
     priceTotal.innerHTML = productTotal
   }
   buyProduct()
@@ -114,8 +113,10 @@ function buyProduct() {
  for (let i = 0; i < item.length; i++) {
   item[i].remove();
   alert("You have successfully placed your order")
+  updatePrice()
  }
  })
+ 
 }
 
 // order now
@@ -126,3 +127,16 @@ orderBtn.forEach((button) => {
     alert("Please wait a moment")
   })
 })
+
+// active menu
+const navBar = document.querySelector(".navbar")
+const itemNav = navBar.querySelectorAll("a")
+
+itemNav.forEach((item) => {
+  item.addEventListener("click", () => {
+    itemNav.forEach(nav=>nav.classList.remove("active"));
+    item.classList.add("active")
+    
+  })
+}
+)
