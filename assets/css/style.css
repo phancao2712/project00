@@ -124,6 +124,7 @@ header {
   left: 0;
   z-index: 1000;
   border-bottom: var(--border);
+  font-size: 1.8rem;
 }
 
 header .logo {
@@ -242,10 +243,6 @@ header .cart-container .total {
   margin-left: 2rem;
   font-weight: 700;
 }
-
-/* header .cart-container .cart-item:nth-child(3) {
-  border: none;
-} */
 
 header .cart-container .img-cart {
   width: 7rem;

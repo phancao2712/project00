@@ -61,7 +61,7 @@ function addToCart(productImg, productName, productPrice) {
   var productList = document.querySelector(".cart-list");
   productList.append(productItem)
   removeFromCart()
-  totalPrice();
+  updatePrice();
 }
 
 // Remove item
@@ -79,12 +79,12 @@ function removeFromCart() {
     var clicked = event.target;
     clicked.parentElement.remove();
   }
-  totalPrice();
+  updatePrice();
   
 }
 
 // TotalPrice
-function totalPrice() {
+function updatePrice() {
   var itemProduct = document.querySelectorAll(".cart-item")
   var productTotal = 0;
   for (var i = 0; i < itemProduct.length; i++) {
@@ -93,18 +93,36 @@ function totalPrice() {
     productTotal = productTotal + price;
     productTotal.toFixed(2);
     console.log(productTotal);
-  } 
+  }
   var priceTotal = document.querySelector(".price-total")
   if (itemProduct.length <= 0) {
-    productTotal = 0;
+    productTotal.innerHtml= "0"
   } else {
     priceTotal.innerHTML = productTotal
   }
+  buyProduct()
 }
 
-function buyProduct () {
-  var buyProduct= document.querySelector(".buy-product");
-  buyProduct.addEventListener("click", function () {
-    alert("")
-  })
+
+
+//  buy product
+function buyProduct() {
+  const buyBtn = document.querySelector(".buy-btn")
+ buyBtn.addEventListener("click", () => {  
+  
+  var item = document.querySelectorAll(".cart-item")
+ for (let i = 0; i < item.length; i++) {
+  item[i].remove();
+  alert("You have successfully placed your order")
  }
+ })
+}
+
+// order now
+const orderBtn = document.querySelectorAll(".orderBtn")
+orderBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    prompt("Please enter the quantity your order!")
+    alert("Please wait a moment")
+  })
+})
