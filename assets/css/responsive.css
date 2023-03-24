@@ -48,10 +48,7 @@
 
   .home .content h1 {
     font-size: 4.5rem;
-  }
-
-  .home .content h1 {
-    font-size: 2.5rem;
+    margin: 3rem;
   }
 
   .home {
@@ -59,8 +56,6 @@
     justify-content: center;
     text-align: center;
   }
-
-  
 
   .our-menu .list-item .item {
     width: 70%;

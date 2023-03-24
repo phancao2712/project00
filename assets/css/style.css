@@ -12,7 +12,7 @@
 }
 
 :root {
-  --primary-color: #ecc641;
+  --primary-color: #CDA566;
   --black: #13131a;
   --bg: #010103;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -61,6 +61,7 @@
 
 section {
   padding: 2rem 7%;
+  z-index: -1;
 }
 
 h2.subtitle {
@@ -108,6 +109,11 @@ html::-webkit-scrollbar-thumb {
 body {
   font-size: 1.6rem;
   background: #000;
+  background-image: url(../img/bg-cf2.png);
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Header */
@@ -306,18 +312,15 @@ header .cart-container .btn {
   max-width: 60rem;
 }
 
-.home .content .desc span {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
 .home .content h1 {
   font-weight: 700;
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: 8rem;
+  line-height: 8rem;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: var(--primary-color);
 }
 
 .home .content .desc {
@@ -476,8 +479,6 @@ header .cart-container .btn {
 
 .product .list .item .price {
   margin-bottom: 1rem;
-
-
 }
 
 /* Review */

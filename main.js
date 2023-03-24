@@ -42,7 +42,6 @@ const addBtn = document.querySelectorAll(".addItem");
 // console.log(addBtn);
 addBtn.forEach(function (button, index) {
   button.addEventListener("click", function (event) {
-    alert("You want add product?");
     var btnItem = event.target;
     var product = btnItem.parentElement;
     var productImg = product.querySelector("img").src;
