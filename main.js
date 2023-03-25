@@ -49,7 +49,7 @@ addBtn.forEach(function (button, index) {
     var productPrice = product.querySelector(".price").innerText;
 
     addToCart(productImg, productName, productPrice);
-    
+    bellCart();
   });
 });
 
@@ -61,6 +61,15 @@ function addToCart(productImg, productName, productPrice) {
   productList.append(productItem)
   removeFromCart()
   updatePrice();
+}
+
+// bell add to cart
+function bellCart() {
+  var cartBtn = document.getElementById("cart").getElementsByTagName("i")
+
+  addBtn.addEventListener("click", function(){
+    cartBtn.classList.toggle("ani")
+  })
 }
 
 // Remove item

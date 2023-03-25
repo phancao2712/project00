@@ -12,7 +12,7 @@
 }
 
 :root {
-  --primary-color: #CDA566;
+  --primary-color: #cda566;
   --black: #13131a;
   --bg: #010103;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -108,12 +108,10 @@ html::-webkit-scrollbar-thumb {
 
 body {
   font-size: 1.6rem;
-  background: #000;
-  background-image: url(../img/bg-cf2.png);
-  background-repeat: repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background: url(../img/bg-fix1.png) center center no-repeat fixed rgb(0, 0, 0);
+}
+
+.main {
 }
 
 /* Header */
@@ -281,6 +279,22 @@ header .cart-container .btn {
   margin: 2rem;
 }
 
+#cart .ani {
+  animation-name: scale;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
 /* Banner */
 .banner {
   width: 100vw;
@@ -389,7 +403,7 @@ header .cart-container .btn {
   border: 1px solid #fff;
   padding: 6.1rem 0;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .our-menu .list-item .item:hover {
@@ -647,50 +661,42 @@ section#Blog {
 }
 
 /* footer */
-footer .foot {
+section.foot {
   display: flex;
-  width: 100vw;
-  background-color: var(--primary-color);
-  justify-content: center;
-  gap: 5rem;
-  align-items: center;
-  font-size: 1.4rem;
+  flex-direction: row;
   color: #fff;
-  padding: 3rem;
+  justify-content: space-between;
+  background-color: var(--primary-color);
 }
 
-footer .icon {
+.col {
+  width: 30%;
   display: flex;
-  gap: 2px;
+  flex-direction: column;
 }
 
-footer .icon a {
-  width: 2.5rem;
-  height: 2.5rem;
+.foot h4 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.img-footer {
+  width: 45%;
+}
+
+.foot .col a {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.foot .social i {
+  color: var(--primary-color);
   background-color: #fff;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 2px;
+  padding: 0.5rem 0.7rem;
   transition: 0.5s;
 }
 
-footer .icon i {
-  color: var(--primary-color);
-}
-
-footer .icon i:hover {
-  scale: 0;
-}
-
-footer .icon a:hover {
+.foot .col .list-icon i:hover {
   transform: translateY(-3px);
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a i {
-  margin-right: 2px;
 }

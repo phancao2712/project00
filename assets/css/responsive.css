@@ -103,6 +103,24 @@
     justify-content: center;
     gap: 3rem;
   }
+
+  .foot {
+    text-align: center;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .foot h4 {
+    margin-bottom: 0;
+  }
+
+  .blog .list-blog {
+    gap: 2rem;
+    justify-content: center;
+  }
+
 }
 
 /* Mobile */
@@ -142,6 +160,10 @@
     margin-bottom: 2rem;
   }
 
+  .blog .list-blog {
+    gap: 2rem;
+  }
+
   .blog .list-blog .item {
     width: 100%;
   }
@@ -154,4 +176,7 @@
     width: 50%;
     transform: translateX(50%);
   }
+  .contact .form label input {
+    width: 89%;
+}
 }
