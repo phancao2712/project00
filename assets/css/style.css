@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: 0.5 linear;
+  /* transition: 0.5s linear; */
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -360,7 +360,7 @@ header .cart-container .btn {
   color: var(--primary-color);
   animation: slideRight 1s ease forwards;
   animation-delay: .7s;
-  transition: .5s;
+  transition: 1s;
 
 }
 
