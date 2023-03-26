@@ -32,6 +32,7 @@
   z-index: 1;
   border: 1px solid var(--primary-color);
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -115,7 +116,7 @@ body {
 
 /* Header */
 .line-1 {
-   display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -147,12 +148,18 @@ header .logo {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
 
 header .navbar a {
   color: #fff;
   padding: 0.5rem 1.5rem;
   position: relative;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  display: inline-block;
 }
 
 header .navbar .active {
@@ -180,6 +187,9 @@ header .navbar a:hover::before {
 
 header .icon {
   display: flex;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+
 }
 
 header .icon i {
@@ -346,7 +356,12 @@ header .cart-container .btn {
   color: #fff;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  opacity: 0;
   color: var(--primary-color);
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+  transition: .5s;
+
 }
 
 .home .content .desc {
@@ -355,11 +370,19 @@ header .cart-container .btn {
   line-height: 3rem;
   text-transform: capitalize;
   color: #ffffff;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
+  transition: .5s;
 }
 
 .home .content .btn {
   padding: 1.6rem 4.7rem;
   margin-top: 4.2rem;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
+  transition: .5s;
 }
 
 /* about */
@@ -373,6 +396,10 @@ header .cart-container .btn {
 .about .image {
   width: 50%;
   flex: 1 1 45rem;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+  transition: .5s;
 }
 
 .about .image img {
@@ -393,6 +420,10 @@ header .cart-container .btn {
   margin-bottom: 2rem;
   transition: 0.5s;
   text-align: justify;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: .7s;
+  transition: .5s;
 }
 
 .about .content .btn {
@@ -411,19 +442,28 @@ header .cart-container .btn {
 }
 
 .our-menu .list-item .item {
+  position: relative;
   width: 30%;
   border: 1px solid #fff;
   padding: 6.1rem 0;
   text-align: center;
   transition: 0.5s;
+  overflow: hidden;
+}
+
+.our-menu .list-item .item:nth-child(2n) {
+  border: 1px solid var(--primary-color);
 }
 
 .our-menu .list-item .item a {
   color: #fff;
 }
 
+.our-menu .list-item .item:hover .box-hover{
+transform: scale(50);
+}
+
 .our-menu .list-item .item:hover {
-  background-color: #fff;
   color: #000;
 }
 
@@ -648,8 +688,6 @@ section#Blog {
   border-bottom: 1px solid #fff;
 }
 
-
-
 .blog .list-blog .item img:hover {
   cursor: pointer;
 }
@@ -713,9 +751,6 @@ section.foot {
 
 .img-footer {
   width: 45%;
-    height: 59%;
-    object-fit: cover;
-    transform: translateX(-22%)
 }
 
 .foot .col a {
@@ -730,6 +765,72 @@ section.foot {
   transition: 0.5s;
 }
 
+.foot .col .list-icon {
+  margin-top: 1rem;
+  transform: translateX(9%);
+}
+
 .foot .col .list-icon i:hover {
   transform: translateY(-3px);
+}
+
+.box-hover {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  transition: 1s;
+  top: 24%;
+  left: 44%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Animation */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
