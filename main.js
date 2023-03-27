@@ -164,10 +164,15 @@ checkAnimation();
 
 function checkAnimation() {
   const animation = document.querySelectorAll(".animation")
-  const tringgerBottom = window.innerHeight;
+  const tringgerBottom = window.innerHeight / 2;
  animation.forEach(item => {
-  if (item.getBoundingClientRect().top < tringgerBottom) {
+  const heightItem = item.getBoundingClientRect().top;
+  if (heightItem  < tringgerBottom) {
    item.classList.add("animated");
+   
+   setTimeout(function() {
+    icon.classList.remove("animated")
+  }, 200)
   }
  });
 }

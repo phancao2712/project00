@@ -315,7 +315,7 @@ header .cart-container .btn {
 
 .animated {
   opacity: 0;
-  animation: slideBottom 1s ease forwards;
+  animation: slideTop 1s ease forwards;
   transition: .5s;
 }
 
@@ -835,7 +835,7 @@ section.foot {
 @keyframes slideLeft {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(100px);
   }
 
   100% {
@@ -847,11 +847,15 @@ section.foot {
 @keyframes slideBottom {
   0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(100px);
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animation {
+  opacity: 0;
 }
