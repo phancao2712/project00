@@ -85,7 +85,6 @@ h2.subtitle::after {
   bottom: 32%;
   left: 45%;
   border-radius: 15px;
-
 }
 
 h2.subtitle span {
@@ -315,7 +314,7 @@ header .cart-container .btn {
 
 .animated {
   animation: slideTop 1s ease forwards;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .scale {
@@ -419,7 +418,7 @@ header .cart-container .btn {
 .about .image {
   width: 50%;
   flex: 1 1 45rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .about .image img {
@@ -862,4 +861,11 @@ section.foot {
 
 #_no-clickjacking-0 {
   opacity: 0;
+}
+
+.end {
+  text-align: center;
+  text-align: center;
+  color: #fff;
+  background-color: var(--primary-color);
 }
