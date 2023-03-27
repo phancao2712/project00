@@ -315,7 +315,12 @@ header .cart-container .btn {
 
 .animated {
   opacity: 0;
-  animation: scale 0.5s infinite;
+  animation: slideBottom 1s ease forwards;
+  transition: .5s;
+}
+
+.scale {
+  animation: scale 1s ease forwards;
 }
 
 @keyframes scale {
@@ -415,10 +420,7 @@ header .cart-container .btn {
 .about .image {
   width: 50%;
   flex: 1 1 45rem;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 0.7s;
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .about .image img {

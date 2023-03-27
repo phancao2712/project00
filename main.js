@@ -41,7 +41,7 @@ function readAbout() {
 const addBtn = document.querySelectorAll(".addItem");
 // console.log(addBtn);
 addBtn.forEach(function (button, index) {
-  button.addEventListener("click", function (event) {
+  button.addEventListener("click",bellCart(), function (event) {
     var btnItem = event.target;
     var product = btnItem.parentElement;
     var productImg = product.querySelector("img").src;
@@ -49,7 +49,7 @@ addBtn.forEach(function (button, index) {
     var productPrice = product.querySelector(".price").innerText;
 
     addToCart(productImg, productName, productPrice);
-    bellCart();
+    
   });
 });
 
@@ -68,10 +68,10 @@ function bellCart() {
   addBtn.forEach(function(button, index) {
     button.addEventListener("click", function() {
       var icon = document.getElementById("cart")
-      icon.classList.add("animated")
+      icon.classList.add("scale")
 
       setTimeout(function() {
-        icon.classList.remove("animated")
+        icon.classList.remove("scale")
       }, 500)
     })
   })
@@ -156,4 +156,19 @@ itemNav.forEach((item) => {
 }
 )
 
+
+// 
+window.addEventListener("scroll",checkAnimation)
+
+checkAnimation();
+
+function checkAnimation() {
+  const animation = document.querySelectorAll(".animation")
+  const tringgerBottom = window.innerHeight;
+ animation.forEach(item => {
+  if (item.getBoundingClientRect().top < tringgerBottom) {
+   item.classList.add("animated");
+  }
+ });
+}
 
