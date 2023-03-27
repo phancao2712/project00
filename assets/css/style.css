@@ -314,7 +314,6 @@ header .cart-container .btn {
 }
 
 .animated {
-  opacity: 0;
   animation: slideTop 1s ease forwards;
   transition: .5s;
 }
@@ -857,5 +856,9 @@ section.foot {
 }
 
 .animation {
+  opacity: 0;
+}
+
+#_no-clickjacking-0 {
   opacity: 0;
 }

@@ -169,10 +169,9 @@ function checkAnimation() {
   const heightItem = item.getBoundingClientRect().top;
   if (heightItem  < tringgerBottom) {
    item.classList.add("animated");
-   
-   setTimeout(function() {
-    icon.classList.remove("animated")
-  }, 200)
+  }
+  else {
+    item.classList.remove("animated");
   }
  });
 }
