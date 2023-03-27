@@ -718,6 +718,7 @@ section#Blog {
   text-transform: capitalize;
   margin-top: 2.2rem;
   margin-bottom: 1.1rem;
+  text-transform: uppercase;
 }
 
 .blog .list-blog .item h4:hover {
