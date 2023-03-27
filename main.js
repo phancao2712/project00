@@ -41,7 +41,7 @@ function readAbout() {
 const addBtn = document.querySelectorAll(".addItem");
 // console.log(addBtn);
 addBtn.forEach(function (button, index) {
-  button.addEventListener("click", bellCart(), function (event) {
+  button.addEventListener("click",  function (event) {
     var btnItem = event.target;
     var product = btnItem.parentElement;
     var productImg = product.querySelector("img").src;
@@ -49,7 +49,7 @@ addBtn.forEach(function (button, index) {
     var productPrice = product.querySelector(".price").innerText;
 
     addToCart(productImg, productName, productPrice);
-  });
+  }, bellCart());
 });
 
 function addToCart(productImg, productName, productPrice) {
