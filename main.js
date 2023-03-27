@@ -75,7 +75,6 @@ function bellCart() {
     button.addEventListener("click", function () {
       var icon = document.getElementById("cart");
       icon.classList.add("scale");
-
       setTimeout(function () {
         icon.classList.remove("scale");
       }, 500);
