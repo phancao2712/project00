@@ -41,7 +41,7 @@ function readAbout() {
 const addBtn = document.querySelectorAll(".addItem");
 // console.log(addBtn);
 addBtn.forEach(function (button, index) {
-  button.addEventListener("click",bellCart(), function (event) {
+  button.addEventListener("click", bellCart(), function (event) {
     var btnItem = event.target;
     var product = btnItem.parentElement;
     var productImg = product.querySelector("img").src;
@@ -49,35 +49,39 @@ addBtn.forEach(function (button, index) {
     var productPrice = product.querySelector(".price").innerText;
 
     addToCart(productImg, productName, productPrice);
-    
   });
 });
 
 function addToCart(productImg, productName, productPrice) {
   var productItem = document.createElement("div.cart-item");
-  var itemContent = '<div class="cart-item"><img src="'+productImg+'" alt="" class="img-cart" /><div class="content"><p class="desc">'+productName+'</p><div style="color : var(--primary-color)"><span class="price">'+productPrice+'</span>$</div></div><i class="fa-solid fa-xmark remove-item"></i></div>';
-  productItem.innerHTML = itemContent;  
+  var itemContent =
+    '<div class="cart-item"><img src="' +
+    productImg +
+    '" alt="" class="img-cart" /><div class="content"><p class="desc">' +
+    productName +
+    '</p><div style="color : var(--primary-color)"><span class="price">' +
+    productPrice +
+    '</span>$</div></div><i class="fa-solid fa-xmark remove-item"></i></div>';
+  productItem.innerHTML = itemContent;
   var productList = document.querySelector(".cart-list");
-  productList.append(productItem)
-  removeFromCart()
+  productList.append(productItem);
+  removeFromCart();
   updatePrice();
 }
 
 // bell add to cart
 function bellCart() {
-  addBtn.forEach(function(button, index) {
-    button.addEventListener("click", function() {
-      var icon = document.getElementById("cart")
-      icon.classList.add("scale")
+  addBtn.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+      var icon = document.getElementById("cart");
+      icon.classList.add("scale");
 
-      setTimeout(function() {
-        icon.classList.remove("scale")
-      }, 500)
-    })
-  })
+      setTimeout(function () {
+        icon.classList.remove("scale");
+      }, 500);
+    });
+  });
 }
-
-
 
 // Remove item
 
@@ -94,12 +98,11 @@ function removeFromCart() {
     clicked.parentElement.remove();
     updatePrice();
   }
-  
 }
 
 // TotalPrice
 function updatePrice() {
-  var itemProduct = document.querySelectorAll(".cart-item")
+  var itemProduct = document.querySelectorAll(".cart-item");
   var productTotal = 0;
   for (var i = 0; i < itemProduct.length; i++) {
     var productPrice = itemProduct[i].querySelector(".price").innerText;
@@ -107,72 +110,61 @@ function updatePrice() {
     productTotal = productTotal + price;
     productTotal.toFixed(1);
   }
-  var priceTotal = document.querySelector(".price-total")
+  var priceTotal = document.querySelector(".price-total");
   if (itemProduct.length >= 1) {
-    priceTotal.innerHTML = productTotal 
+    priceTotal.innerHTML = productTotal;
   } else if (itemProduct.length === 0) {
     productTotal = 0;
-    priceTotal.innerHTML = productTotal
+    priceTotal.innerHTML = productTotal;
   }
-  buyProduct()
+  buyProduct();
 }
-
-
 
 //  buy product
 function buyProduct() {
-  const buyBtn = document.querySelector(".buy-btn")
- buyBtn.addEventListener("click", () => {  
-  
-  var item = document.querySelectorAll(".cart-item")
- for (let i = 0; i < item.length; i++) {
-  item[i].remove();
-  alert("You have successfully placed your order")
-  updatePrice()
- }
- })
- 
+  const buyBtn = document.querySelector(".buy-btn");
+  buyBtn.addEventListener("click", () => {
+    var item = document.querySelectorAll(".cart-item");
+    for (let i = 0; i < item.length; i++) {
+      item[i].remove();
+      alert("You have successfully placed your order");
+      updatePrice();
+    }
+  });
 }
 
 // order now
-const orderBtn = document.querySelectorAll(".orderBtn")
+const orderBtn = document.querySelectorAll(".orderBtn");
 orderBtn.forEach((button) => {
   button.addEventListener("click", () => {
-    prompt("Please enter the quantity your order!")
-    alert("Please wait a moment")
-  })
-})
+    prompt("Please enter the quantity your order!");
+    alert("Please wait a moment");
+  });
+});
 
 // active menu
-const navBar = document.querySelector(".navbar")
-const itemNav = navBar.querySelectorAll("a")
+const navBar = document.querySelector(".navbar");
+const itemNav = navBar.querySelectorAll("a");
 
 itemNav.forEach((item) => {
   item.addEventListener("click", () => {
-    itemNav.forEach(nav=>nav.classList.remove("active"));
-    item.classList.add("active")
-    
-  })
-}
-)
+    itemNav.forEach((nav) => nav.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
 
-
-// 
-window.addEventListener("scroll",checkAnimation)
+//
+window.addEventListener("scroll", checkAnimation);
 
 checkAnimation();
 
 function checkAnimation() {
-  const animation = document.querySelectorAll(".animation")
+  const animation = document.querySelectorAll(".animation");
   const tringgerBottom = window.innerHeight / 2;
- animation.forEach(item => {
-  const heightItem = item.getBoundingClientRect().top;
-  if (heightItem  < tringgerBottom) {
-   item.classList.add("animated");
-  }
-  else {
-    item.classList.remove("animated");
-  }
- });
+  animation.forEach((item) => {
+    const heightItem = item.getBoundingClientRect().top;
+    if (heightItem < tringgerBottom) {
+      item.classList.add("animated");
+    }
+  });
 }
-
