@@ -66,6 +66,7 @@ section {
 }
 
 h2.subtitle {
+  position: relative;
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.5;
@@ -73,6 +74,18 @@ h2.subtitle {
   padding: 7rem 0;
   color: var(--primary-color);
   text-align: center;
+}
+
+h2.subtitle::after {
+  position: absolute;
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: 32%;
+  left: 45%;
+  border-radius: 15px;
+
 }
 
 h2.subtitle span {
@@ -157,8 +170,8 @@ header .navbar a {
   padding: 0.5rem 1.5rem;
   position: relative;
   opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
   display: inline-block;
 }
 
@@ -189,7 +202,6 @@ header .icon {
   display: flex;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-
 }
 
 header .icon i {
@@ -301,19 +313,19 @@ header .cart-container .btn {
   margin: 2rem;
 }
 
-#cart .ani {
-  animation-name: scale;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+.animated {
+  opacity: 0;
+  animation: scale 0.5s infinite;
 }
+
 @keyframes scale {
-  from {
-    -webkit-transform: scale(0);
+  0% {
+    opacity: 0;
+    transform: scale(0);
   }
-  to {
-    -webkit-transform: scale(1);
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -359,9 +371,16 @@ header .cart-container .btn {
   opacity: 0;
   color: var(--primary-color);
   animation: slideRight 1s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
   transition: 1s;
+}
 
+.home .content h1::after {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 50%;
+  color: var(--primary-color);
 }
 
 .home .content .desc {
@@ -372,8 +391,8 @@ header .cart-container .btn {
   color: #ffffff;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
-  animation-delay: .7s;
-  transition: .5s;
+  animation-delay: 0.7s;
+  transition: 0.5s;
 }
 
 .home .content .btn {
@@ -381,8 +400,8 @@ header .cart-container .btn {
   margin-top: 4.2rem;
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  animation-delay: .7s;
-  transition: .5s;
+  animation-delay: 0.7s;
+  transition: 0.5s;
 }
 
 /* about */
@@ -398,8 +417,8 @@ header .cart-container .btn {
   flex: 1 1 45rem;
   opacity: 0;
   animation: slideRight 1s ease forwards;
-  animation-delay: .7s;
-  transition: .5s;
+  animation-delay: 0.7s;
+  transition: 0.5s;
 }
 
 .about .image img {
@@ -422,8 +441,8 @@ header .cart-container .btn {
   text-align: justify;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-  animation-delay: .7s;
-  transition: .5s;
+  animation-delay: 0.7s;
+  transition: 0.5s;
 }
 
 .about .content .btn {
@@ -459,8 +478,8 @@ header .cart-container .btn {
   color: #fff;
 }
 
-.our-menu .list-item .item:hover .box-hover{
-transform: scale(50);
+.our-menu .list-item .item:hover .box-hover {
+  transform: scale(50);
 }
 
 .our-menu .list-item .item:hover {

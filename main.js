@@ -65,12 +65,19 @@ function addToCart(productImg, productName, productPrice) {
 
 // bell add to cart
 function bellCart() {
-  var cartBtn = document.getElementById("cart").getElementsByTagName("i")
+  addBtn.forEach(function(button, index) {
+    button.addEventListener("click", function() {
+      var icon = document.getElementById("cart")
+      icon.classList.add("animated")
 
-  addBtn.addEventListener("click", function(){
-    cartBtn.classList.toggle("ani")
+      setTimeout(function() {
+        icon.classList.remove("animated")
+      }, 500)
+    })
   })
 }
+
+
 
 // Remove item
 
@@ -148,3 +155,5 @@ itemNav.forEach((item) => {
   })
 }
 )
+
+
