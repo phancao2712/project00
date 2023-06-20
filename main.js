@@ -39,20 +39,36 @@ function readAbout() {
 // add to cart
 
 const addBtn = document.querySelectorAll(".addItem");
-// console.log(addBtn);
 addBtn.forEach(function (button, index) {
-  button.addEventListener("click",  function (event) {
-    var btnItem = event.target;
-    var product = btnItem.parentElement;
-    var productImg = product.querySelector("img").src;
-    var productName = product.querySelector(".heading").innerText;
-    var productPrice = product.querySelector(".price").innerText;
+  button.addEventListener(
+    "click",
+    function (event) {
+      var btnItem = event.target;
+      var product = btnItem.parentElement;
+      var productImg = product.querySelector("img").src;
+      var productName = product.querySelector(".heading").innerText;
+      var productPrice = product.querySelector(".price").innerText;
 
-    addToCart(productImg, productName, productPrice);
-  }, bellCart());
+      addToCart(productImg, productName, productPrice);
+    },
+    bellCart()
+  );
 });
 
 function addToCart(productImg, productName, productPrice) {
+  var cartItem = {productImg, productName, productPrice}
+  var cart = []
+
+  if (cart.length > 0) {
+    // cart = cart.splice(cart.length - 1 , cart.length, cartItem)
+    let carts = {...cart, cartItem}
+    cart.push(carts)
+    console.log(carts);
+  } else {
+    cart.push(cartItem)
+  }
+  console.log(cart.length);
+
   var productItem = document.createElement("div.cart-item");
   var itemContent =
     '<div class="cart-item"><img src="' +
@@ -61,12 +77,13 @@ function addToCart(productImg, productName, productPrice) {
     productName +
     '</p><div style="color : var(--primary-color)"><span class="price">' +
     productPrice +
-    '</span>$</div></div><i class="fa-solid fa-xmark remove-item"></i></div>';
+    '</span>đ</div></div><i class="fa-solid fa-xmark remove-item"></i></div>';
   productItem.innerHTML = itemContent;
   var productList = document.querySelector(".cart-list");
   productList.append(productItem);
   removeFromCart();
   updatePrice();
+  localStorage.setItem("cartList", cartItem)
 }
 
 // bell add to cart
@@ -83,7 +100,6 @@ function bellCart() {
 }
 
 // Remove item
-
 function removeFromCart() {
   var removeBtn = document.getElementsByClassName("remove-item");
 
@@ -111,12 +127,13 @@ function updatePrice() {
   }
   var priceTotal = document.querySelector(".price-total");
   if (itemProduct.length >= 1) {
-    priceTotal.innerHTML = productTotal;
+    priceTotal.innerHTML = productTotal + ".000";
   } else if (itemProduct.length === 0) {
     productTotal = 0;
-    priceTotal.innerHTML = productTotal;
+    priceTotal.innerHTML = productTotal + ".000";
   }
   buyProduct();
+  
 }
 
 //  buy product
@@ -165,5 +182,18 @@ function checkAnimation() {
     if (heightItem < tringgerBottom) {
       item.classList.add("animated");
     }
+  });
+}
+
+// show border
+function showBorder(item) {
+  removeBorder(this);
+  item.classList.toggle("border");
+}
+
+function removeBorder() {
+  var sizeBtn = document.querySelectorAll(".sizeBtn");
+  sizeBtn.forEach(function (item) {
+    item.classList.remove("border");
   });
 }

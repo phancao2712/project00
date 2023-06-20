@@ -11,6 +11,8 @@
   border: none;
 }
 
+
+
 :root {
   --primary-color: #cda566;
   --black: #13131a;
@@ -201,6 +203,8 @@ header .icon {
   display: flex;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
+  justify-content: center;
+  align-items: center;
 }
 
 header .icon i {

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,700&family=Sen:wght@400;700;800&display=swap");
+
+:root {
+    --primary-color: #cda566;
+    
+  }
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* transition: 0.5s linear; */
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8%;
+}
+
+.container .block-1 , .container .block-2 {
+    width: 48%;
+}
+
+.block-1 img {
+    width: 100%;
+    margin:auto;
+}
+
+.titel {
+    color: #fff;
+    font-size: 30px;
+}
+
+.price {
+    color: var(--primary-color);;
+    font-size: 25px;
+}
+
+.box-size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.sizeBtn {
+    width: 100px;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.border {
+    border: 2px solid var(--primary-color);;
+    color: var(--primary-color);;
+}
+
+svg {
+    width: 16px;
+    float: left;
+    margin-left: 8px;
+    fill: #fff;
+}
+
+.big-btn {
+    width: 194px;
+    margin: 4px;
+    justify-content: center;
+    text-align: center;
+    height: 51px;
+}
+
+.btn-buy {
+    width: 88%;
+    background-color: #fff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 50px auto;
+    border-radius: 9px;
+    color: #fff;
+    background-color: var(--primary-color);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.space {
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+}
+
+.para {
+  color: #fff;
+  margin-bottom: 20px;
+} 
+
+h3 {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* sản phẩm liên quan */
+.pro-relate {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.img-relate {
+    width: 100%;
+    border-radius: 11px;
+    box-shadow: rgba(248, 248, 248, 0.61) 0px 5px 15px;
+}
+
+.pro-relate .prod {
+    width: 12%;
+    color: #fff;
+} 
+
+.price-prod {
+    font-size: 13px;
+    
+}
+
+.prod-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.prod-name:hover {
+    color: var(--primary-color);
+}

@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/img/img-login.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-login {
+  width: 60px;
+}
+
+.block {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 20px;
+}
+
+.block-left,
+.block-right {
+  width: 50%;
+}
+
+.block-left {
+  backdrop-filter: blur(11px);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.block-left .model {
+  opacity: 0.5;
+  padding: 50px;
+  height: 200px;
+  background-color: #fff;
+  margin-top: 150px;
+}
+
+.block-left .heading {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  color: #687690;
+  line-height: 1.5;
+  font-family: monospace;
+}
+
+.block-right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.block-right .login {
+  margin: 50px;
+}
+
+.block-right .hello {
+  width: 30px;
+  height: 30px;
+}
+
+.login .sub-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 5px;
+  color: #cda566;
+}
+
+.login .desc {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #a3a6ab;
+}
+
+.input-field {
+  background-color: #eff3f6;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  max-height: 65px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+
+.input-field i {
+  padding-left: 10px;
+  opacity: 0.5;
+}
+
+form input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 16px 15px;
+}
+
+form .lost {
+  font-size: 0px;
+  transition: fontSize 2s;
+}
+
+form .btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.btn-field button {
+  flex-basis: 48%;
+  background-color: #cda566;
+  background-image: linear-gradient(180deg, #cda566 74%, #f7ce68 99%);
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+.btn-field button.disable {
+  background: #eff3f6;
+  color: #cda566;
+}
+
+/*check box */
+label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#check-box {
+  position: absolute;
+  transform: scale(0);
+  height: 20px;
+  width: 20px;
+}
+
+label input:checked ~ .checkbox {
+  transform: rotate(45deg);
+  width: 10px;
+  margin-top: -2px;
+  margin-left: 10px;
+  border-color: #24c78e;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+
+label .checkbox {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 3px solid #434343;
+  border-radius: 6px;
+  transition: all 0.375s;
+}
+
+.remember {
+  width: 116px;
+  font-size: 15px;
+  margin-left: 9px;
+  color: #fff;
+}

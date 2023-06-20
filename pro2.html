@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./assets/css/prod.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Link JS -->
+    <script src="https://kit.fontawesome.com/c9111ed195.js" crossorigin="anonymous"></script>
+    <!-- Responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="./assets/img/logo.svg" alt="" class="logo" />
+      </a>
+      <!-- Menu -->
+      <nav class="navbar">
+        <a href="./index.html" style="--i: 1">Trang Chủ</a>
+        <a href="./index.html" style="--i: 2">Giới Thiệu</a>
+        <a href="./index.html" style="--i: 3">Thực Đơn</a>
+        <a href="./index.html" style="--i: 4">Sản Phẩm</a>
+        <a href="./index.html" style="--i: 5">Đánh Giá</a>
+        <a href="./index.html" style="--i: 6">Liên Hệ</a>
+        <a href="./index.html" style="--i: 7">Bài Viết</a>
+      </nav>
+      <div class="icon">
+        <div id="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div id="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div id="btn-menu"><i class="fa-solid fa-bars"></i></div>
+
+        <a href="./login.html"
+          ><i class="fa-solid fa-user" style="color: #ffffff"></i
+        ></a>
+      </div>
+
+      <!-- Search form -->
+      <div class="search-form">
+        <input type="search" placeholder="Tìm Kiếm..." id="search-box" />
+        <label for="search-box"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></label>
+      </div>
+
+      <!-- Cart -->
+      <div class="cart-container">
+        <div class="cart-list"></div>
+        <span class="total">Tổng <span class="price-total">0</span>đ</span>
+        <div class="btn buy-btn">Mua Ngay</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="block-1"><img src="./assets/img/cf2.webp" alt="" /></div>
+        <div class="block-2">
+          <h2 class="titel">Café Sữa đá</h2>
+          <span class="price">39.000 đ</span>
+          <div class="size">
+            <span style="color: #ffffff">Chọn Size (bắt buộc)</span>
+            <div class="box-size box-1">
+              <button onclick="showBorder(this)" class="sizeBtn">
+                <svg viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="shape"
+                    d="M11.6511 1.68763H10.3529V0.421907C10.3529 0.194726 10.1582 0 9.93104 0H2.17444C1.94726 0 1.75254 0.194726 1.75254 0.421907V1.65517H0.454361C0.194726 1.68763 0 1.88235 0 2.10953V4.18661C0 4.41379 0.194726 4.60852 0.421907 4.60852H1.33063L1.72008 8.8925L1.78499 9.76876L2.30426 15.6105C2.33671 15.8377 2.49899 16 2.72617 16H9.28195C9.50913 16 9.70385 15.8377 9.70385 15.6105L10.2231 9.76876L10.288 8.8925L10.6775 4.60852H11.5862C11.8134 4.60852 12.0081 4.41379 12.0081 4.18661V2.10953C12.073 1.88235 11.8783 1.68763 11.6511 1.68763ZM2.56389 8.40568H3.50507C3.47262 8.56795 3.47262 8.73022 3.47262 8.8925C3.47262 9.02231 3.47262 9.15213 3.50507 9.28195H2.66126L2.6288 8.92495L2.56389 8.40568ZM9.47667 8.92495L9.44422 9.28195H8.56795C8.60041 9.15213 8.60041 9.02231 8.60041 8.8925C8.60041 8.73022 8.56795 8.56795 8.56795 8.40568H9.50913L9.47667 8.92495ZM7.72414 8.8925C7.72414 9.83367 6.97769 10.5801 6.03651 10.5801C5.09534 10.5801 4.34888 9.83367 4.34888 8.8925C4.34888 7.95132 5.09534 7.20487 6.03651 7.20487C6.97769 7.20487 7.72414 7.95132 7.72414 8.8925ZM8.92495 15.1562H3.18053L2.72617 10.1582H3.82961C4.28398 10.9371 5.09534 11.4564 6.03651 11.4564C6.97769 11.4564 7.8215 10.9371 8.24341 10.1582H9.34686L8.92495 15.1562ZM9.60649 7.52941H8.21095C7.75659 6.81542 6.94523 6.3286 6.03651 6.3286C5.12779 6.3286 4.31643 6.81542 3.86207 7.52941H2.49899L2.23935 4.60852H9.86613L9.60649 7.52941ZM11.1968 3.73225H10.3205H1.75254H0.876268V2.56389H2.17444H2.2069H2.23935H8.27586C8.50304 2.56389 8.69777 2.36917 8.69777 2.14199C8.69777 1.91481 8.50304 1.72008 8.27586 1.72008H2.6288V0.876268H9.47667V2.10953C9.47667 2.33671 9.6714 2.53144 9.89858 2.53144H11.1968V3.73225Z"
+                  ></path>
+                </svg>
+                Nhỏ
+              </button>
+              <button onclick="showBorder(this)" class="sizeBtn">
+                <svg viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="shape"
+                    d="M11.6511 1.68763H10.3529V0.421907C10.3529 0.194726 10.1582 0 9.93104 0H2.17444C1.94726 0 1.75254 0.194726 1.75254 0.421907V1.65517H0.454361C0.194726 1.68763 0 1.88235 0 2.10953V4.18661C0 4.41379 0.194726 4.60852 0.421907 4.60852H1.33063L1.72008 8.8925L1.78499 9.76876L2.30426 15.6105C2.33671 15.8377 2.49899 16 2.72617 16H9.28195C9.50913 16 9.70385 15.8377 9.70385 15.6105L10.2231 9.76876L10.288 8.8925L10.6775 4.60852H11.5862C11.8134 4.60852 12.0081 4.41379 12.0081 4.18661V2.10953C12.073 1.88235 11.8783 1.68763 11.6511 1.68763ZM2.56389 8.40568H3.50507C3.47262 8.56795 3.47262 8.73022 3.47262 8.8925C3.47262 9.02231 3.47262 9.15213 3.50507 9.28195H2.66126L2.6288 8.92495L2.56389 8.40568ZM9.47667 8.92495L9.44422 9.28195H8.56795C8.60041 9.15213 8.60041 9.02231 8.60041 8.8925C8.60041 8.73022 8.56795 8.56795 8.56795 8.40568H9.50913L9.47667 8.92495ZM7.72414 8.8925C7.72414 9.83367 6.97769 10.5801 6.03651 10.5801C5.09534 10.5801 4.34888 9.83367 4.34888 8.8925C4.34888 7.95132 5.09534 7.20487 6.03651 7.20487C6.97769 7.20487 7.72414 7.95132 7.72414 8.8925ZM8.92495 15.1562H3.18053L2.72617 10.1582H3.82961C4.28398 10.9371 5.09534 11.4564 6.03651 11.4564C6.97769 11.4564 7.8215 10.9371 8.24341 10.1582H9.34686L8.92495 15.1562ZM9.60649 7.52941H8.21095C7.75659 6.81542 6.94523 6.3286 6.03651 6.3286C5.12779 6.3286 4.31643 6.81542 3.86207 7.52941H2.49899L2.23935 4.60852H9.86613L9.60649 7.52941ZM11.1968 3.73225H10.3205H1.75254H0.876268V2.56389H2.17444H2.2069H2.23935H8.27586C8.50304 2.56389 8.69777 2.36917 8.69777 2.14199C8.69777 1.91481 8.50304 1.72008 8.27586 1.72008H2.6288V0.876268H9.47667V2.10953C9.47667 2.33671 9.6714 2.53144 9.89858 2.53144H11.1968V3.73225Z"
+                  ></path>
+                </svg>
+                Vừa
+              </button>
+              <button onclick="showBorder(this)" class="sizeBtn">
+                <svg viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="shape"
+                    d="M11.6511 1.68763H10.3529V0.421907C10.3529 0.194726 10.1582 0 9.93104 0H2.17444C1.94726 0 1.75254 0.194726 1.75254 0.421907V1.65517H0.454361C0.194726 1.68763 0 1.88235 0 2.10953V4.18661C0 4.41379 0.194726 4.60852 0.421907 4.60852H1.33063L1.72008 8.8925L1.78499 9.76876L2.30426 15.6105C2.33671 15.8377 2.49899 16 2.72617 16H9.28195C9.50913 16 9.70385 15.8377 9.70385 15.6105L10.2231 9.76876L10.288 8.8925L10.6775 4.60852H11.5862C11.8134 4.60852 12.0081 4.41379 12.0081 4.18661V2.10953C12.073 1.88235 11.8783 1.68763 11.6511 1.68763ZM2.56389 8.40568H3.50507C3.47262 8.56795 3.47262 8.73022 3.47262 8.8925C3.47262 9.02231 3.47262 9.15213 3.50507 9.28195H2.66126L2.6288 8.92495L2.56389 8.40568ZM9.47667 8.92495L9.44422 9.28195H8.56795C8.60041 9.15213 8.60041 9.02231 8.60041 8.8925C8.60041 8.73022 8.56795 8.56795 8.56795 8.40568H9.50913L9.47667 8.92495ZM7.72414 8.8925C7.72414 9.83367 6.97769 10.5801 6.03651 10.5801C5.09534 10.5801 4.34888 9.83367 4.34888 8.8925C4.34888 7.95132 5.09534 7.20487 6.03651 7.20487C6.97769 7.20487 7.72414 7.95132 7.72414 8.8925ZM8.92495 15.1562H3.18053L2.72617 10.1582H3.82961C4.28398 10.9371 5.09534 11.4564 6.03651 11.4564C6.97769 11.4564 7.8215 10.9371 8.24341 10.1582H9.34686L8.92495 15.1562ZM9.60649 7.52941H8.21095C7.75659 6.81542 6.94523 6.3286 6.03651 6.3286C5.12779 6.3286 4.31643 6.81542 3.86207 7.52941H2.49899L2.23935 4.60852H9.86613L9.60649 7.52941ZM11.1968 3.73225H10.3205H1.75254H0.876268V2.56389H2.17444H2.2069H2.23935H8.27586C8.50304 2.56389 8.69777 2.36917 8.69777 2.14199C8.69777 1.91481 8.50304 1.72008 8.27586 1.72008H2.6288V0.876268H9.47667V2.10953C9.47667 2.33671 9.6714 2.53144 9.89858 2.53144H11.1968V3.73225Z"
+                  ></path>
+                </svg>
+                Lớn
+              </button>
+            </div>
+          </div>
+          <span style="color: #ffffff">Topping</span>
+          <div class="box-size">
+            <button onclick="showBorder(this)" class="sizeBtn big-btn">
+              Kem phô mai Machiato +10.000đ
+            </button>
+            <button onclick="showBorder(this)" class="sizeBtn big-btn">
+              Shot Expresso +10.000đ
+            </button>
+            <button onclick="showBorder(this)" class="sizeBtn big-btn">
+              Trân châu trắng +10.000đ
+            </button>
+            <button onclick="showBorder(this)" class="sizeBtn big-btn">
+              Sốt Caramel +10.000đ
+            </button>
+            <button onclick="showBorder(this)" class="sizeBtn big-btn">
+              Thạch cafe +10.000đ
+            </button>
+          </div>
+          <a href="" class="btn-buy">
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 0C14.5523 0 15 0.447715 15 1V1.999L20 2V8L17.98 7.999L20.7467 15.5953C20.9105 16.032 21 16.5051 21 16.999C21 19.2082 19.2091 20.999 17 20.999C15.1368 20.999 13.5711 19.7251 13.1265 18.0008L8.87379 18.0008C8.42948 19.7256 6.86357 21 5 21C3.05513 21 1.43445 19.612 1.07453 17.7725C0.435576 17.439 0 16.7704 0 16V3C0 2.44772 0.447715 2 1 2H8C8.55228 2 9 2.44772 9 3V11C9 11.5128 9.38604 11.9355 9.88338 11.9933L10 12H12C12.5128 12 12.9355 11.614 12.9933 11.1166L13 11V2H10V0H14ZM5 15C3.89543 15 3 15.8954 3 17C3 18.1046 3.89543 19 5 19C6.10457 19 7 18.1046 7 17C7 15.8954 6.10457 15 5 15ZM17 14.999C15.8954 14.999 15 15.8944 15 16.999C15 18.1036 15.8954 18.999 17 18.999C18.1046 18.999 19 18.1036 19 16.999C19 15.8944 18.1046 14.999 17 14.999ZM15.852 7.999H15V11C15 12.6569 13.6569 14 12 14H10C8.69412 14 7.58312 13.1656 7.17102 12.0009L1.99994 12V14.3542C2.73289 13.5238 3.80528 13 5 13C6.86393 13 8.43009 14.2749 8.87405 16.0003H13.1257C13.5693 14.2744 15.1357 12.999 17 12.999C17.2373 12.999 17.4697 13.0197 17.6957 13.0593L15.852 7.999ZM7 7H2V10H7V7ZM18 4H15V6H18V4ZM7 4H2V5H7V4Z"
+                fill="white"
+                fill-opacity="0.6"
+              ></path>
+            </svg>
+            Đặt giao tận nơi
+          </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="space"></div>
+      <h3>Mô tả sản phẩm</h3>
+      <p class="para">
+        Thức uống giúp tỉnh táo tức thì để bắt đầu ngày mới thật hứng khởi. Không đắng khét như cà phê truyền thống, The Coffee House Sữa Đá mang hương vị hài hoà đầy lôi cuốn. Là sự đậm đà của 100% cà phê Arabica Cầu Đất rang vừa tới, biến tấu tinh tế với sữa đặc và kem sữa ngọt ngào cực quyến rũ. Càng hấp dẫn hơn với topping thạch 100% cà phê nguyên chất giúp giữ trọn vị ngon đến ngụm cuối cùng.
+      </p>
+      <div class="space"></div>
+      <h3>Sản phẩm liên quan</h3> 
+      <div class="pro-relate">
+        <div class="prod">
+          <a href="./pro1.html"><img src="./assets/img/cf1.webp" alt="" class="img-relate"></a>
+          <a href="./pro1.html"><span class="prod-name">Blissful Brew</span></a>
+          <div class="price-prod">49.000 đ</div>
+        </div>
+        <div class="prod">
+          <a href="./pro2.html"><img src="./assets/img/cf2.webp" alt="" class="img-relate"></a>
+          <a href="./pro2.html"><span class="prod-name">Café Sữa đá</span></a>
+          <div class="price-prod">39.000 đ</div>
+        </div>
+        <div class="prod">
+          <a href="./pro3.html"><img src="./assets/img/cf2.webp" alt="" class="img-relate"></a>
+          <a href="./pro3.html"><span class="prod-name">Caramel Macchiato đá</span></a>
+          <div class="price-prod">55.000 đ</div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section class="foot">
+        <div class="col social">
+         <img src="./assets/img/img-footer1.png" alt="" class="img-footer">
+          <div class="list-icon">
+            <a href="#!"><i class="fa-brands fa-facebook-f"></i></a >
+            <a href="#!"><i class="fa-brands fa-instagram"></i></a >
+            <a href="#!"><i class="fa-brands fa-twitter"></i></a >
+          </div>
+        </div>
+          <div class="col">
+           <h4>Contact</h4>
+           <a href="mailto:phancao@gmail.com"><i class="fa-solid fa-envelope"></i> Email:admin@beanjoy.vn</a>
+           <a href="tel:+843628927672"><i class="fa-solid fa-phone"></i> Liên Hệ: 036 289 2672</a>
+           <a href="#!"><i class="fa-solid fa-location-pin"></i> Địa Chỉ: 1392 quang trung, Phường 15, Hồ Chí Minh, Thành phố Hồ Chí Minh, Việt Nam</a>
+          </div>
+          <div class="col">
+            <h4>Giới Thiệu</h4>
+            <p>BeanJoy là một thương hiệu cà phê mới nhằm mang đến trải nghiệm cà phê tốt nhất cho khách hàng của chúng tôi. Chúng tôi tập trung vào việc tạo ra các sản phẩm cà phê chất lượng cao, từ việc lựa chọn cẩn thận các hạt cà phê cao cấp đến quy trình rang và xay đóng với sự đảm bảo về độ tươi mới và hương vị tốt nhất.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
